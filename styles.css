@@ -1,17 +1,13 @@
+/* No margin needed for table layout */
 #layout-content {
-    margin-left: 240px;
+    box-sizing: border-box;
+    padding: 2.5rem 2rem;
 }
-/* Ensure main-wrapper and layout-content are always visible and flexible */
+/* Styles for flex layout when used */
 #main-wrapper {
     display: flex;
     min-height: 100vh;
     width: 100vw;
-    box-sizing: border-box;
-}
-#layout-content {
-    flex: 1 1 0%;
-    min-width: 0;
-    overflow-x: auto;
     box-sizing: border-box;
 }
 /* Profile flex layout for header */
@@ -73,8 +69,8 @@ h2.section-title:hover {
     background: #f7faff;
     border-right: 2px solid #e0e0e0;
     min-width: 120px;
-    max-width: 240px;
-    width: 100%;
+    max-width: 180px;
+    width: auto;
     padding: 32px 18px 32px 18px;
     box-sizing: border-box;
     border-radius: 16px;
@@ -127,10 +123,7 @@ footer {
 }
 @media (max-width: 900px) {
     #layout-content {
-        margin-left: 220px;
-    }
-    #layout-content {
-        margin-left: 0;
+        padding: 1.5rem 1rem;
     }
     #main-wrapper {
         flex-direction: row;
@@ -141,20 +134,14 @@ footer {
         position: sticky;
         top: 0;
         min-width: 120px;
-        max-width: 220px;
-        width: 100%;
+        max-width: 180px;
+        width: auto;
         height: calc(100vh - 36px);
         flex-direction: column;
         align-items: flex-start;
         margin: 18px 0 18px 0;
         border-radius: 16px;
         box-shadow: 0 2px 12px rgba(63,81,181,0.06);
-    }
-    #layout-content {
-        flex: 1 1 0%;
-        min-width: 0;
-        overflow-x: auto;
-        box-sizing: border-box;
     }
 }
 @media (max-width: 600px) {
